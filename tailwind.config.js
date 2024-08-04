@@ -8,11 +8,11 @@ export default {
         widescreen: { min: "780px" },
       },
       colors: {
-        primary: "",
-        secondary: "",
-        background: "",
+        primary: "#FF269B",
+        secondary: "#F69669",
+        background: "#FEFCFF",
         foreground: "",
-        front: "",
+        front: "#292E34",
         back: "",
       },
       borderRadius: {
@@ -22,6 +22,7 @@ export default {
         inherit: "inherit",
       },
       fontFamily: {
+        proximaNova: '"Proxima-Nova", sans-serif',
         poppins: '"Poppins", sans-serif',
         raleway: '"Raleway", sans-serif',
       },
