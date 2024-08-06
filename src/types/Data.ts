@@ -4,7 +4,7 @@ export interface Survey {
   costPerEntry: number;
 
   fields: Array<{
-    type: "categorical" | "numerical" | "freetext";
+    type: "categorical" | "numerical" | "boolean";
     // Categorical
     categories?: string[];
 
@@ -12,10 +12,5 @@ export interface Survey {
     min?: number;
     step?: number;
     max?: number;
-
-    // Freetext
-    minLength?: number;
-    maxLength?: number;
-    pattern?: RegExp;
   }>;
 }
