@@ -12,8 +12,8 @@ export default {
         secondary: "#F69669",
         background: "#FEFCFF",
         foreground: "",
-        front: "#292E34",
-        back: "",
+        front: "#11151E",
+        back: "#FFFFFF",
       },
       borderRadius: {
         inherit: "inherit",
@@ -23,6 +23,7 @@ export default {
       },
       fontFamily: {
         proximaNova: '"Proxima-Nova", sans-serif',
+        inter: '"Inter", sans-serif',
         poppins: '"Poppins", sans-serif',
         raleway: '"Raleway", sans-serif',
       },
