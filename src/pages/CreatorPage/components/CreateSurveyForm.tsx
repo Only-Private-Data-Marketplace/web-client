@@ -41,27 +41,29 @@ export default function CreateSurveyForm() {
   const [entries, setEntries] = useState<number>(1);
 
   return (
-    <div className="pt-36 pb-16 p-page bg-gradient-to-r from-primary to-secondary">
+    <div className="pt-36 pb-16 p-page  text-white h-screen">
+      <figure className="absolute-cover bg-gradient-to-r from-primary via-secondary to-secondary" />
       <figure className="absolute-cover bg-gradient-to-b from-transparent to-background" />
 
-      <div className="flex flex-col gap-y-6 z-10 relative w-1/3">
+      <div className="flex flex-col gap-y-6 z-10 relative w-1/3 rounded-xl p-6 bg-back">
         <div className="">
-          <h1 className="text-md">Name of the survey</h1>
-          <input className="w-full py-1 px-2 rounded-md" />
+          <input
+            className="text-front w-full py-1 px-2 bg-transparent border-b border-front/20"
+            placeholder="Name of the Survey"
+          />
         </div>
 
         <div className="">
-          <h1 className="text-md">Description for the survey</h1>
           <textarea
-            className="w-full py-1 px-2 rounded-md focus-within:outline-none"
+            className="text-front w-full py-1 px-2 bg-transparent border-b border-front/20 focus-within:outline-none"
+            placeholder="Description for the Survey"
             minLength={5}
           />
         </div>
 
         <div className="">
-          <h1 className="text-md">Token Type for the survey</h1>
           <select
-            className="w-full py-1 px-2 rounded-md focus-within:outline-none"
+            className="text-front w-full py-1 px-2 bg-transparent border-b border-front/20"
             value={token ? token.token : ""}
             onChange={(e) =>
               settoken(
@@ -69,7 +71,7 @@ export default function CreateSurveyForm() {
               )
             }
           >
-            <option value="" disabled>
+            <option value="" disabled className="">
               Select token
             </option>
             {tokens.map((token) => (
@@ -81,24 +83,25 @@ export default function CreateSurveyForm() {
         </div>
 
         <div className="">
-          <h1 className="text-md">Amount in survey</h1>
           <input
-            className="w-full py-1 px-2 rounded-md focus-within:outline-none"
+            className="text-front w-full py-1 px-2 bg-transparent border-b border-front/20"
             onChange={(e) => setAmount(Number(e.target.value))}
+            placeholder="Amount for the Survey"
             type="number"
           />
         </div>
 
         <div className="">
-          <h1 className="text-md">Number of entries</h1>
           <input
-            className="w-full py-1 px-2 rounded-md focus-within:outline-none"
+            className="text-front w-full py-1 px-2 bg-transparent border-b border-front/20"
+            placeholder="Number of Entries"
             onChange={(e) => setEntries(Number(e.target.value))}
             type="number"
           />
-          <div className="bg-primary/10 p-2 rounded-md text-primary mt-2">
+          <div className="bg-primary/50 p-2 rounded-md text-back mt-2">
             Note: It means, every user who fills the form will get{" "}
-            {stringify(amount / entries)} {token?.name} token from the survey pool
+            {stringify(amount / entries)} {token?.name} token from the survey
+            pool
           </div>
         </div>
       </div>

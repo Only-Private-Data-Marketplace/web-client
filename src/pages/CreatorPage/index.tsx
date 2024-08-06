@@ -5,6 +5,7 @@ import CreateSurveyForm from "./components/CreateSurveyForm";
 export default function CreatorPage() {
   return (
     <>
+    <NavbarGradient /> 
     <CreateSurveyForm />
     </>
   );
