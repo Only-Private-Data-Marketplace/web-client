@@ -4,7 +4,7 @@ import Icon from "./Icon";
 import { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
-  const [scollY, setScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
   const flag = useRef(false);
 
   useEffect(() => {
@@ -29,7 +29,12 @@ export default function Navbar() {
       </div>
 
       <div className="py-1">
-        <figure className="w-[1px] bg-front/30 h-full mx-6" />
+        <figure
+          className={twMerge(
+            "w-[1px] bg-back/30 h-full mx-6",
+            scrollY > 13 && "bg-front/30"
+          )}
+        />
       </div>
 
       <div className="flex gap-x-8 items-center">
@@ -73,7 +78,7 @@ const navLinks = [
   },
   {
     name: "Surveys",
-    to: "/",
+    to: "/surveys",
   },
   {
     name: "Creator",
