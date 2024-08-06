@@ -77,6 +77,6 @@ const navLinks = [
   },
   {
     name: "Creator",
-    to: "/",
+    to: "/creator",
   },
 ];
